@@ -867,7 +867,12 @@ function renderAll() {
   let totalGraded = 0;
   tabs.forEach(({ key, data }) => {
     const grid = document.getElementById('grid-' + key);
-    grid.innerHTML = data.map(c => buildCard(c, key)).join('');
+    const sorted = [...data].sort((a, b) => {
+      const ya = parseInt(a.year) || 9999;
+      const yb = parseInt(b.year) || 9999;
+      return ya - yb;
+    });
+    grid.innerHTML = sorted.map(c => buildCard(c, key)).join('');
     buildFilters(key, data);
     totalGraded += data.filter(c => c.graded_flag === 'Y').length;
   });
