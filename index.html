@@ -707,11 +707,11 @@ function rarityBadge(r) {
   return `<span class="rarity-badge ${m.cls}">${m.label}</span>`;
 }
 
-function buildCard(coin) {
+function buildCard(coin, tabKey) {
   const graded = coin.graded_flag === 'Y';
   const notes = (coin.notes && coin.notes !== '—') ? coin.notes : '';
   return `
-    <div class="coin-card" data-rarity="${coin.rarity}" onclick="openModal('${coin.id.replace(/'/g,"\\'")}', '${getCurrentTab()}')">
+    <div class="coin-card" data-rarity="${coin.rarity}" onclick="openModal('${coin.id.replace(/'/g,"\\'")}', '${tabKey}')">
       <div class="coin-images">
         <div class="coin-img-wrap">${coin.img_front ? `<img class="coin-img" src="${coin.img_front}" alt="Obverse" onerror="this.style.display='none'">` : `<svg viewBox="0 0 48 48" fill="none" style="width:48px;height:48px;opacity:.15"><circle cx="24" cy="24" r="20" stroke="#888" stroke-width="1.5"/></svg>`}</div>
         <span class="img-label img-label-obv">Obverse</span>
@@ -784,7 +784,7 @@ function renderAll() {
   let totalGraded = 0;
   tabs.forEach(({ key, data }) => {
     const grid = document.getElementById('grid-' + key);
-    grid.innerHTML = data.map(buildCard).join('');
+    grid.innerHTML = data.map(c => buildCard(c, key)).join('');
     buildFilters(key, data);
     totalGraded += data.filter(c => c.graded_flag === 'Y').length;
   });
