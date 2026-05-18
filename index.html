@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0074)file:///C:/Users/AbdullahAragoneses/Downloads/proof_catalogue_2026_28.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SA Bullion — Proof Krugerrand Catalogue 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="./index_files/css2" rel="stylesheet">
 <style>
   :root {
     --gold: #C9932A;
@@ -267,20 +267,18 @@
   .coin-images {
     position: relative;
     background: #0e0e0e;
-    display: flex;
-    align-items: stretch;
-    height: 240px;
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
   }
   .coin-img-wrap {
     width: 100%;
-    height: 240px;
-    flex-shrink: 0;
+    height: 340px;
     background: #0e0e0e;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 16px;
     position: relative;
   }
   .coin-img-wrap::after {
@@ -305,11 +303,12 @@
     object-fit: contain;
     object-position: center;
     display: block;
+    padding: 12px;
   }
   .coin-img-divider { display: none; }
   .coin-img-placeholder {
     width: 100%;
-    height: 240px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -667,23 +666,23 @@
     <div class="stat"><span class="stat-num" id="total-count">56</span><span class="stat-label">Total Coins</span></div>
     <div class="stat"><span class="stat-num">4</span><span class="stat-label">Denominations</span></div>
     <div class="stat"><span class="stat-num">1968–2017</span><span class="stat-label">Year Span</span></div>
-    <div class="stat"><span class="stat-num" id="graded-count">—</span><span class="stat-label">Graded Coins</span></div>
+    <div class="stat"><span class="stat-num" id="graded-count">19</span><span class="stat-label">Graded Coins</span></div>
   </div>
 </header>
 
 <!-- NAVIGATION -->
 <div class="nav-wrap">
   <nav class="nav">
-    <button class="nav-btn active" onclick="showTab('1oz')" id="tab-btn-1oz">
+    <button class="nav-btn active" onclick="showTab(&#39;1oz&#39;)" id="tab-btn-1oz">
       1 oz <span class="nav-count" id="count-1oz">30</span>
     </button>
-    <button class="nav-btn" onclick="showTab('half')" id="tab-btn-half">
+    <button class="nav-btn" onclick="showTab(&#39;half&#39;)" id="tab-btn-half">
       ½ oz <span class="nav-count" id="count-half">13</span>
     </button>
-    <button class="nav-btn" onclick="showTab('quarter')" id="tab-btn-quarter">
+    <button class="nav-btn" onclick="showTab(&#39;quarter&#39;)" id="tab-btn-quarter">
       ¼ oz <span class="nav-count" id="count-quarter">7</span>
     </button>
-    <button class="nav-btn" onclick="showTab('tenth')" id="tab-btn-tenth">
+    <button class="nav-btn" onclick="showTab(&#39;tenth&#39;)" id="tab-btn-tenth">
       1/10 oz <span class="nav-count" id="count-tenth">6</span>
     </button>
   </nav>
@@ -701,8 +700,669 @@
       </div>
       <span class="section-count" id="visible-1oz">Showing all 30 coins</span>
     </div>
-    <div class="filter-bar" id="filters-1oz"></div>
-    <div class="coin-grid" id="grid-1oz"></div>
+    <div class="filter-bar" id="filters-1oz"><span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="applyFilter(&#39;1oz&#39;,&#39;All&#39;,this)">All</button><button class="filter-btn" onclick="applyFilter(&#39;1oz&#39;,&#39;Rare&#39;,this)">Rare</button><button class="filter-btn" onclick="applyFilter(&#39;1oz&#39;,&#39;Low Mintage&#39;,this)">Low Mintage</button><button class="filter-btn" onclick="applyFilter(&#39;1oz&#39;,&#39;Common&#39;,this)">Common</button><button class="filter-btn" onclick="applyFilter(&#39;1oz&#39;,&#39;Graded&#39;,this)">Graded</button></div>
+    <div class="coin-grid" id="grid-1oz">
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0009&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/SAB_1_KrugerRand_1968_Back (3).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1968</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0009</p>
+        <p class="coin-grading">SANGS PF66</p>
+        <p class="coin-notes">Early issue; solid mid-grade proof with good collector appeal.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 2025-1284-003</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0010&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/SAB_94_KrugerRand_1968_Back (2).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1968</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0010</p>
+        <p class="coin-grading">SANGS PF66</p>
+        <p class="coin-notes">Early issue; consistent mid-grade example, not rare but desirable.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 2025-1211-002</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0011&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/SAB_95_KrugerRand_1968_Back (2).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1968</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0011</p>
+        <p class="coin-grading">SANGS AU58</p>
+        <p class="coin-notes">Early issue; near-proof appearance</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 2025-1284-004</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0012&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0012 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1968</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0012</p>
+        <p class="coin-grading">SGCE 89</p>
+        <p class="coin-notes">Early proof issue; moderate grade with solid collector appeal.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 13536</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0013&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0013 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1968</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0013</p>
+        <p class="coin-grading">SGCE 98</p>
+        <p class="coin-notes">Early proof issue; high-grade example with added desirability.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 48454</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0014&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/SAB_2_KrugerRand_1969_Back (2).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1969</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0014</p>
+        <p class="coin-grading">SANGS PF68</p>
+        <p class="coin-notes">Early issue; high-grade proof, strong eye appeal though not scarce.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 2025-1212-003</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0015&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/SAB_3_KrugerRand_1969_Back (2).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1969</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0015</p>
+        <p class="coin-grading">SANGS PF68</p>
+        <p class="coin-notes">Early issue; premium grade example with strong collector demand.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 2025-1212-002</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0016&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/SAB_61_KrugerRand_1969_Back (2).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1969</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0016</p>
+        <p class="coin-grading">SANGS PF68</p>
+        <p class="coin-notes">Early issue; attractive high-grade coin, readily collectible.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 2025-1211-004</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0017&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0017 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1969</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0017</p>
+        <p class="coin-grading">SGCE 93</p>
+        <p class="coin-notes">Early proof issue; mid-to-high grade with good collector demand.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 6252</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0018&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/SAB_96_KrugerRand_1969_Front (4).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1969</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0018</p>
+        <p class="coin-grading">SGCE 95</p>
+        <p class="coin-notes">Early issue; equivalent high-grade proof, solid collector piece.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 45728</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0019&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0019 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1970</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0019</p>
+        <p class="coin-grading">SGCE 97</p>
+        <p class="coin-notes">Early 1970s proof; high-grade example with strong appeal.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 46126</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1OZ-0020&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0020 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1983</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0020</p>
+        <p class="coin-grading">SGCE 103</p>
+        <p class="coin-notes">Later proof issue; exceptional grade</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>19,100</span></span>
+          <span class="coin-cert"><span>Cert #</span> 76379</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0021&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0021 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1985</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0021</p>
+        
+        <p class="coin-notes">Proof issue; standard mintage year offering both gold value and classic Krugerrand appeal.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,224</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1OZ-0023&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0023 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1982</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0023</p>
+        
+        <p class="coin-notes">Pre-sanctions issue; first year of revised reverse design, solid type appeal.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>16,960</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0024&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0024 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1978</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0024</p>
+        <p class="coin-grading">SGCE 104</p>
+        <p class="coin-notes">Peak-era issue; exceptional grade with outstanding surface quality and strong collector appeal.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 50875</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1OZ-0025&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0025 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1981</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0025</p>
+        
+        <p class="coin-notes">Peak-era issue; first year of reverse mintmark, added variety interest.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>12,900</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1OZ-0026&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0026 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1982</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0026</p>
+        <p class="coin-grading">SGCE 103</p>
+        <p class="coin-notes">Pre-sanctions issue; exceptional grade on first year of revised reverse design.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>16,960</span></span>
+          <span class="coin-cert"><span>Cert #</span> 54858</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1OZ-0027&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0027 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1983</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0027</p>
+        
+        <p class="coin-notes">Pre-sanctions issue; solid gold and numismatic value.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>19,100</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1OZ-0028&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0028 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1984</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0028</p>
+        
+        <p class="coin-notes">Last full pre-sanctions year; strong type demand with full gold content.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>14,000</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1OZ-0029&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0029 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1984</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0029</p>
+        
+        <p class="coin-notes">Last full pre-sanctions year; strong type demand with full gold content.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>14,000</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0030&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0030 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1978</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0030</p>
+        
+        <p class="coin-notes">Peak-era issue; solid type demand with full gold content.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1OZ-0031&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0031 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1980</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0031</p>
+        
+        <p class="coin-notes">Milestone year; first year of fractional Krugerrand range, good collector appeal.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>12,000</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Rare" onclick="openModal(&#39;PKR-1OZ-0032&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0032 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-rare">Rare</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1975</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0032</p>
+        
+        <p class="coin-notes">Mid-70s issue; pre-peak era proof with solid type demand and full gold content.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>5,600</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0033&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0033 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1973</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0033</p>
+        <p class="coin-grading">SGCE 92</p>
+        <p class="coin-notes">Early issue; mid-grade certified example from the Krugerrand's formative years, good collector appeal.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> 14603</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1OZ-0034&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0034 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1984</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0034</p>
+        
+        <p class="coin-notes">Late pre-sanctions issue; solid gold and numismatic value with strong type demand.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>14,000</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1OZ-0035&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0035 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1981</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0035</p>
+        
+        <p class="coin-notes">Peak-era issue; first year of reverse mintmark, added variety interest.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>12,900</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1OZ-0036&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0036 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1984</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0036</p>
+        
+        <p class="coin-notes">Last full pre-sanctions year; strong type demand with full gold content.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>14,000</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1OZ-0037&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-0037 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1978</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1OZ-0037</p>
+        
+        <p class="coin-notes">Peak-era issue; solid type demand with full gold content.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>10,000</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Rare" onclick="openModal(&#39;Nate Reserved&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-Nate-Reserved (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-rare">Rare</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1992</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">Nate Reserved</p>
+        
+        <p class="coin-notes">Peak-era issue; solid type demand with full gold content.</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>2,067</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Rare" onclick="openModal(&#39;MT Reserved&#39;, &#39;1oz&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1OZ-Thakier-Reserved (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-rare">Rare</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2002</span>
+          <span class="coin-type">1oz Gold Proof</span>
+        </div>
+        <p class="coin-id">MT Reserved</p>
+        
+        <p class="coin-notes">Basel World Money Fair Mintmark Proof</p>
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>3,531</span></span>
+          <span class="coin-cert"><span>Cert #</span> Mintmark</span>
+        </div>
+      </div>
+    </div></div>
     <p class="empty-state" id="empty-1oz">No coins match the selected filter.</p>
   </div>
 
@@ -715,8 +1375,295 @@
       </div>
       <span class="section-count" id="visible-half">Showing all 13 coins</span>
     </div>
-    <div class="filter-bar" id="filters-half"></div>
-    <div class="coin-grid" id="grid-half"></div>
+    <div class="filter-bar" id="filters-half"><span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="applyFilter(&#39;half&#39;,&#39;All&#39;,this)">All</button><button class="filter-btn" onclick="applyFilter(&#39;half&#39;,&#39;Ultra Rare&#39;,this)">Ultra Rare</button><button class="filter-btn" onclick="applyFilter(&#39;half&#39;,&#39;Rare&#39;,this)">Rare</button><button class="filter-btn" onclick="applyFilter(&#39;half&#39;,&#39;Low Mintage&#39;,this)">Low Mintage</button><button class="filter-btn" onclick="applyFilter(&#39;half&#39;,&#39;Common&#39;,this)">Common</button><button class="filter-btn" onclick="applyFilter(&#39;half&#39;,&#39;Graded&#39;,this)">Graded</button></div>
+    <div class="coin-grid" id="grid-half">
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1/2OZ-0001&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0001 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1982</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0001</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>13,000</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1/2OZ-0002&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0002 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1982</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0002</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>13,000</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1/2OZ-0003&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0003 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1981</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0003</p>
+        <p class="coin-grading">SANGS PF104</p>
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>9,000</span></span>
+          <span class="coin-cert"><span>Cert #</span> H5036</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1/2OZ-0004&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0004 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1983</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0004</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>13,600</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Low Mintage" onclick="openModal(&#39;PKR-1/2OZ-0005&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0005 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-low">Low Mintage</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1984</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0005</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>9,900</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Rare" onclick="openModal(&#39;PKR-1/2OZ-0006&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0006 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-rare">Rare</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1990</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0006</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>2,850</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="" onclick="openModal(&#39;PKR-1/2OZ-0007&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0007 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2015</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0007</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>N/A</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="" onclick="openModal(&#39;PKR-1/2OZ-0008&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0008 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2015</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0008</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>N/A</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="" onclick="openModal(&#39;PKR-1/2OZ-0009&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0009 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2015</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0009</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>N/A</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="" onclick="openModal(&#39;PKR-1/2OZ-0010&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0010 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2015</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0010</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>N/A</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="" onclick="openModal(&#39;PKR-1/2OZ-0011&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1.2OZ-0011 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2015</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0011</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>N/A</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Ultra Rare" onclick="openModal(&#39;PKR-1/2OZ-0012&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0012 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-ultra">Ultra Rare</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2017 (50th Anniversary)</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0012</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>500</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Rare" onclick="openModal(&#39;PKR-1/2OZ-0013&#39;, &#39;half&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-2OZ-0013 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-rare">Rare</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2005</span>
+          <span class="coin-type">1/2oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/2OZ-0013</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>3,092</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div></div>
     <p class="empty-state" id="empty-half">No coins match the selected filter.</p>
   </div>
 
@@ -729,8 +1676,163 @@
       </div>
       <span class="section-count" id="visible-quarter">Showing all 7 coins</span>
     </div>
-    <div class="filter-bar" id="filters-quarter"></div>
-    <div class="coin-grid" id="grid-quarter"></div>
+    <div class="filter-bar" id="filters-quarter"><span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="applyFilter(&#39;quarter&#39;,&#39;All&#39;,this)">All</button><button class="filter-btn" onclick="applyFilter(&#39;quarter&#39;,&#39;Rare&#39;,this)">Rare</button><button class="filter-btn" onclick="applyFilter(&#39;quarter&#39;,&#39;Common&#39;,this)">Common</button><button class="filter-btn" onclick="applyFilter(&#39;quarter&#39;,&#39;Graded&#39;,this)">Graded</button></div>
+    <div class="coin-grid" id="grid-quarter">
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1/4OZ-0001&#39;, &#39;quarter&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-4OZ-0001 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1982</span>
+          <span class="coin-type">1/4oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/4OZ-0001</p>
+        <p class="coin-grading">SGCE -</p>
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>11,270</span></span>
+          <span class="coin-cert"><span>Cert #</span> Q4816</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1/4OZ-0002&#39;, &#39;quarter&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-4OZ-0002 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1984</span>
+          <span class="coin-type">1/4oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/4OZ-0002</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>13,020</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1/4OZ-0003&#39;, &#39;quarter&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-4OZ-0003 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1984</span>
+          <span class="coin-type">1/4oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/4OZ-0003</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>13,020</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Rare" onclick="openModal(&#39;PKR-1/4OZ-0004&#39;, &#39;quarter&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-4OZ-0004 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-rare">Rare</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2004</span>
+          <span class="coin-type">1/4oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/4OZ-0004</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>4,570</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="" onclick="openModal(&#39;PKR-1/4OZ-0005&#39;, &#39;quarter&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-4OZ-0005 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2009</span>
+          <span class="coin-type">1/4oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/4OZ-0005</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>N/A</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="" onclick="openModal(&#39;PKR-1/4OZ-0006&#39;, &#39;quarter&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-4OZ-0006 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2014</span>
+          <span class="coin-type">1/4oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/4OZ-0006</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>N/A</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Rare" onclick="openModal(&#39;PKR-1/4OZ-0007&#39;, &#39;quarter&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-4OZ-0007 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-rare">Rare</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2005</span>
+          <span class="coin-type">1/4oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/4OZ-0007</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>4,115</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div></div>
     <p class="empty-state" id="empty-quarter">No coins match the selected filter.</p>
   </div>
 
@@ -743,8 +1845,141 @@
       </div>
       <span class="section-count" id="visible-tenth">Showing all 6 coins</span>
     </div>
-    <div class="filter-bar" id="filters-tenth"></div>
-    <div class="coin-grid" id="grid-tenth"></div>
+    <div class="filter-bar" id="filters-tenth"><span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="applyFilter(&#39;tenth&#39;,&#39;All&#39;,this)">All</button><button class="filter-btn" onclick="applyFilter(&#39;tenth&#39;,&#39;Ultra Rare&#39;,this)">Ultra Rare</button><button class="filter-btn" onclick="applyFilter(&#39;tenth&#39;,&#39;Rare&#39;,this)">Rare</button><button class="filter-btn" onclick="applyFilter(&#39;tenth&#39;,&#39;Common&#39;,this)">Common</button><button class="filter-btn" onclick="applyFilter(&#39;tenth&#39;,&#39;Graded&#39;,this)">Graded</button></div>
+    <div class="coin-grid" id="grid-tenth">
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1/10OZ-0001&#39;, &#39;tenth&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-10OZ-0001 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1982</span>
+          <span class="coin-type">1/10oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/10OZ-0001</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>11,270</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1/10OZ-0002&#39;, &#39;tenth&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-10OZ-0002 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1982</span>
+          <span class="coin-type">1/10oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/10OZ-0002</p>
+        <p class="coin-grading">SGCE -</p>
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>11,270</span></span>
+          <span class="coin-cert"><span>Cert #</span> T1552</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Common" onclick="openModal(&#39;PKR-1/10OZ-0003&#39;, &#39;tenth&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-10OZ-0003 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-common">Common</span>
+        <span class="graded-badge">Graded</span>
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1982</span>
+          <span class="coin-type">1/10oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/10OZ-0003</p>
+        <p class="coin-grading">SGCE -</p>
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>11,270</span></span>
+          <span class="coin-cert"><span>Cert #</span> T4616</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Rare" onclick="openModal(&#39;PKR-1/10OZ-0004&#39;, &#39;tenth&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-10OZ-0004 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-rare">Rare</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1987</span>
+          <span class="coin-type">1/10oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/10OZ-0004</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>6,065</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Ultra Rare" onclick="openModal(&#39;PKR-1/10OZ-0005&#39;, &#39;tenth&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-10OZ-0005 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-ultra">Ultra Rare</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">1992</span>
+          <span class="coin-type">1/10oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/10OZ-0005</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>1,789</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div>
+    <div class="coin-card" data-rarity="Rare" onclick="openModal(&#39;PKR-1/10OZ-0006&#39;, &#39;tenth&#39;)">
+      <div class="coin-images">
+        <div class="coin-img-wrap"><img class="coin-img" src="./index_files/PKR-1-10OZ-0006 (Front).jpg" alt="Obverse" onerror="this.style.display=&#39;none&#39;"></div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        <span class="rarity-badge rarity-rare">Rare</span>
+        
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">2000</span>
+          <span class="coin-type">1/10oz Gold Proof</span>
+        </div>
+        <p class="coin-id">PKR-1/10OZ-0006</p>
+        
+        
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>4,603</span></span>
+          <span class="coin-cert"><span class="status-dot"></span>In Stock</span>
+        </div>
+      </div>
+    </div></div>
     <p class="empty-state" id="empty-tenth">No coins match the selected filter.</p>
   </div>
 
@@ -768,14 +2003,19 @@
 <!-- ZOOM OVERLAY -->
 <div class="zoom-overlay" id="zoom-overlay" onclick="closeZoom(event)">
   <button class="zoom-close" onclick="closeZoomDirect()">×</button>
-  <button class="zoom-nav zoom-prev" onclick="zoomNav(-1, event)">&#8249;</button>
-  <img id="zoom-img" src="" alt="">
-  <button class="zoom-nav zoom-next" onclick="zoomNav(1, event)">&#8250;</button>
+  <button class="zoom-nav zoom-prev" onclick="zoomNav(-1, event)">‹</button>
+  <img id="zoom-img" src="file:///C:/Users/AbdullahAragoneses/Downloads/proof_catalogue_2026_28.html" alt="">
+  <button class="zoom-nav zoom-next" onclick="zoomNav(1, event)">›</button>
   <span class="zoom-label" id="zoom-label"></span>
 </div>
 
 <script>
-const DATA = {"1oz": [{"id": "PKR-1OZ-0009", "year": "1968", "coin_type": "1oz Gold Proof", "grading": "SANGS PF66", "cert": "2025-1284-003", "notes": "Early issue; solid mid-grade proof with good collector appeal.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_1_KrugerRand_1968_Back%20(3).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_1_KrugerRand_1968_Front%20(2).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0010", "year": "1968", "coin_type": "1oz Gold Proof", "grading": "SANGS PF66", "cert": "2025-1211-002", "notes": "Early issue; consistent mid-grade example, not rare but desirable.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_94_KrugerRand_1968_Back%20(2).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_94_KrugerRand_1968_Front%20(2).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0011", "year": "1968", "coin_type": "1oz Gold Proof", "grading": "SANGS AU58", "cert": "2025-1284-004", "notes": "Early issue; near-proof appearance", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_95_KrugerRand_1968_Back%20(2).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_95_KrugerRand_1968_Front%20(2).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0012", "year": "1968", "coin_type": "1oz Gold Proof", "grading": "SGCE 89", "cert": "13536", "notes": "Early proof issue; moderate grade with solid collector appeal.", "img_front": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0012%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0012%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0013", "year": "1968", "coin_type": "1oz Gold Proof", "grading": "SGCE 98", "cert": "48454", "notes": "Early proof issue; high-grade example with added desirability.", "img_front": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0013%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0013%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0014", "year": "1969", "coin_type": "1oz Gold Proof", "grading": "SANGS PF68", "cert": "2025-1212-003", "notes": "Early issue; high-grade proof, strong eye appeal though not scarce.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_2_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_2_KrugerRand_1969_Front%20(2).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0015", "year": "1969", "coin_type": "1oz Gold Proof", "grading": "SANGS PF68", "cert": "2025-1212-002", "notes": "Early issue; premium grade example with strong collector demand.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_3_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_3_KrugerRand_1969_Front%20(2).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0016", "year": "1969", "coin_type": "1oz Gold Proof", "grading": "SANGS PF68", "cert": "2025-1211-004", "notes": "Early issue; attractive high-grade coin, readily collectible.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_61_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_61_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0017", "year": "1969", "coin_type": "1oz Gold Proof", "grading": "SGCE 93", "cert": "6252", "notes": "Early proof issue; mid-to-high grade with good collector demand.", "img_front": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0017%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0017%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0018", "year": "1969", "coin_type": "1oz Gold Proof", "grading": "SGCE 95", "cert": "45728", "notes": "Early issue; equivalent high-grade proof, solid collector piece.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_96_KrugerRand_1969_Front%20(4).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_96_KrugerRand_1969_Back%20(4).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0019", "year": "1970", "coin_type": "1oz Gold Proof", "grading": "SGCE 97", "cert": "46126", "notes": "Early 1970s proof; high-grade example with strong appeal.", "img_front": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0019%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0019%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0020", "year": "1983", "coin_type": "1oz Gold Proof", "grading": "SGCE 103", "cert": "76379", "notes": "Later proof issue; exceptional grade", "img_front": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0020%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0020%20(.jpg?tr=n-sa-bullion-product", "mintage": "19100", "rarity": "Common", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0021", "year": "1985", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Proof issue; standard mintage year offering both gold value and classic Krugerrand appeal.", "img_front": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0021%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0021%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "10224", "rarity": "Low Mintage", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0023", "year": "1982", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Pre-sanctions issue; first year of revised reverse design, solid type appeal.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0023%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0023%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "16960", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0024", "year": "1978", "coin_type": "1oz Gold Proof", "grading": "SGCE 104", "cert": "50875", "notes": "Peak-era issue; exceptional grade with outstanding surface quality and strong collector appeal.", "img_front": "https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0024%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0024%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0025", "year": "1981", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Peak-era issue; first year of reverse mintmark, added variety interest.", "img_front": "https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0025%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0025%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "12900", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0026", "year": "1982", "coin_type": "1oz Gold Proof", "grading": "SGCE 103", "cert": "54858", "notes": "Pre-sanctions issue; exceptional grade on first year of revised reverse design.", "img_front": "https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0026%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0026%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "16960", "rarity": "Common", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0027", "year": "1983", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Pre-sanctions issue; solid gold and numismatic value.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0027%20(Front).jpg?updatedAt=1778833997809&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0027%20(Back).jpg?updatedAt=1778833997818&tr=n-sa-bullion-product", "mintage": "19100", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0028", "year": "1984", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Last full pre-sanctions year; strong type demand with full gold content.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0028%20(Front).jpg?updatedAt=1778833997748&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0028%20(Back).jpg?updatedAt=1778833997772&tr=n-sa-bullion-product", "mintage": "14000", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0029", "year": "1984", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Last full pre-sanctions year; strong type demand with full gold content.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0029%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0029%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "14000", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0030", "year": "1978", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Peak-era issue; solid type demand with full gold content.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0030%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0030%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0031", "year": "1980", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Milestone year; first year of fractional Krugerrand range, good collector appeal.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0031%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0031%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "12000", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0032", "year": "1975", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Mid-70s issue; pre-peak era proof with solid type demand and full gold content.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0032%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0032%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "5600", "rarity": "Rare", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0033", "year": "1973", "coin_type": "1oz Gold Proof", "grading": "SGCE 92", "cert": "14603", "notes": "Early issue; mid-grade certified example from the Krugerrand's formative years, good collector appeal.", "img_front": "https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0033%20(Front).jpg?updatedAt=1777533776227&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0033%20(Back).jpg?updatedAt=1777533776821&tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1OZ-0034", "year": "1984", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Late pre-sanctions issue; solid gold and numismatic value with strong type demand.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0034%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0034%20(Front).jpg?tr=n-sa-bullion-product", "mintage": "14000", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0035", "year": "1981", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Peak-era issue; first year of reverse mintmark, added variety interest.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0035%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0035%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "12900", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0036", "year": "1984", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Last full pre-sanctions year; strong type demand with full gold content.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0036%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0036%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "14000", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1OZ-0037", "year": "1978", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Peak-era issue; solid type demand with full gold content.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0037%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0037%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "10000", "rarity": "Low Mintage", "graded_flag": "N", "status": "In Stock"}, {"id": "Nate Reserved", "year": "1992", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "Peak-era issue; solid type demand with full gold content.", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-Nate-Reserved%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0029%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "2067", "rarity": "Rare", "graded_flag": "N", "status": "In Stock"}, {"id": "MT Reserved", "year": "2002 Mintmark BWMF", "coin_type": "1oz Gold Proof", "grading": "Ungraded", "cert": "Mintmark", "notes": "Basel World Money Fair Mintmark Proof", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-Thakier-Reserved%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-Thakier-Reserved%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "300", "rarity": "Ultra Rare", "graded_flag": "N", "status": "In Stock"}], "half": [{"id": "PKR-1/2OZ-0001", "year": "1982", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0001%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0001%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "13000", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/2OZ-0002", "year": "1982", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0002%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0002%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "13000", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/2OZ-0003", "year": "1981", "coin_type": "1/2oz Gold Proof", "grading": "SANGS PF104", "cert": "H5036", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0003%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0003%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "9000", "rarity": "Low Mintage", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1/2OZ-0004", "year": "1983", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0004%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0004%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "13600", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/2OZ-0005", "year": "1984", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0005%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0005%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "9900", "rarity": "Low Mintage", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/2OZ-0006", "year": "1990", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0006%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0006%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "2850", "rarity": "Rare", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/2OZ-0007", "year": "2015", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0007%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0007%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "N/A", "rarity": "", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/2OZ-0008", "year": "2015", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0008%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0008%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "N/A", "rarity": "", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/2OZ-0009", "year": "2015", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0009%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0009%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "N/A", "rarity": "", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/2OZ-0010", "year": "2015", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0010%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0010%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "N/A", "rarity": "", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/2OZ-0011", "year": "2015", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1.2OZ-0011%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0011%20(Front).jpg?tr=n-sa-bullion-product", "mintage": "N/A", "rarity": "", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/2OZ-0012", "year": "2017 (50th Anniversary)", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0012%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0012%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "500", "rarity": "Ultra Rare", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/2OZ-0013", "year": "2005", "coin_type": "1/2oz Gold Proof", "grading": "Ungraded", "cert": "Ungraded", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0013%20(Front).jpg?tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0013%20(Back).jpg?updatedAt=1778833512201&tr=n-sa-bullion-product", "mintage": "3092", "rarity": "Rare", "graded_flag": "N", "status": "In Stock"}], "quarter": [{"id": "PKR-1/4OZ-0001", "year": "1982", "coin_type": "1/4oz Gold Proof", "grading": "SGCE ", "cert": "Q4816", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0001%20(Front).jpg?updatedAt=1778832969097&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0001%20(Back).jpg?updatedAt=1778832968979&tr=n-sa-bullion-product", "mintage": "11270", "rarity": "Common", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1/4OZ-0002", "year": "1984", "coin_type": "1/4oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0002%20(Front).jpg?updatedAt=1778832969011&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0002%20(Back).jpg?updatedAt=1778832969033&tr=n-sa-bullion-product", "mintage": "13020", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/4OZ-0003", "year": "1984", "coin_type": "1/4oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0003%20(Front).jpg?updatedAt=1778832968970&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0003%20(Back).jpg?updatedAt=1778832968958&tr=n-sa-bullion-product", "mintage": "13020", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/4OZ-0004", "year": "2004", "coin_type": "1/4oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0004%20(Front).jpg?updatedAt=1778832968968&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0004%20(Back).jpg?updatedAt=1778832968960&tr=n-sa-bullion-product", "mintage": "4570", "rarity": "Rare", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/4OZ-0005", "year": "2009", "coin_type": "1/4oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0005%20(Front).jpg?updatedAt=1778832968984&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0005%20(Back).jpg?updatedAt=1778832969031&tr=n-sa-bullion-product", "mintage": "N/A", "rarity": "", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/4OZ-0006", "year": "2014", "coin_type": "1/4oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0006%20(Front).jpg?updatedAt=1778832969019&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0006%20(Front).jpg?updatedAt=1778832969019&tr=n-sa-bullion-product", "mintage": "N/A", "rarity": "", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/4OZ-0007", "year": "2005", "coin_type": "1/4oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0007%20(Front).jpg?updatedAt=1778832969021&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0007%20(Back).jpg?updatedAt=1778832969032&tr=n-sa-bullion-product", "mintage": "4115", "rarity": "Rare", "graded_flag": "N", "status": "In Stock"}], "tenth": [{"id": "PKR-1/10OZ-0001", "year": "1982", "coin_type": "1/10oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0001%20(Front).jpg?updatedAt=1778833002203&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0001%20(Back).jpg?updatedAt=1778833002196&tr=n-sa-bullion-product", "mintage": "11270", "rarity": "Common", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/10OZ-0002", "year": "1982", "coin_type": "1/10oz Gold Proof", "grading": "SGCE ", "cert": "T1552", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0002%20(Front).jpg?updatedAt=1778833002293&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0002%20(Back).jpg?updatedAt=1778833002163&tr=n-sa-bullion-product", "mintage": "11270", "rarity": "Common", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1/10OZ-0003", "year": "1982", "coin_type": "1/10oz Gold Proof", "grading": "SGCE ", "cert": "T4616", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0003%20(Front).jpg?updatedAt=1778833002311&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0003%20(Back).jpg?updatedAt=1778833002281&tr=n-sa-bullion-product", "mintage": "11270", "rarity": "Common", "graded_flag": "Y", "status": "In Stock"}, {"id": "PKR-1/10OZ-0004", "year": "1987", "coin_type": "1/10oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0004%20(Front).jpg?updatedAt=1778833002122&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0004%20(Back).jpg?tr=n-sa-bullion-product", "mintage": "6065", "rarity": "Rare", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/10OZ-0005", "year": "1992", "coin_type": "1/10oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0005%20(Front).jpg?updatedAt=1778833002206&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0001%20(Back).jpg?updatedAt=1778833002196&tr=n-sa-bullion-product", "mintage": "1789", "rarity": "Ultra Rare", "graded_flag": "N", "status": "In Stock"}, {"id": "PKR-1/10OZ-0006", "year": "2000", "coin_type": "1/10oz Gold Proof", "grading": "Ungraded", "cert": "—", "notes": "—", "img_front": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0006%20(Front).jpg?updatedAt=1778833002161&tr=n-sa-bullion-product", "img_back": "https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0006%20(Back).jpg?updatedAt=1778833002193&tr=n-sa-bullion-product", "mintage": "4603", "rarity": "Rare", "graded_flag": "N", "status": "In Stock"}]};
+const DATA = {
+  "1oz": [{"id":"PKR-1OZ-0009","year":"1968","coin_type":"1oz Gold Proof","grading":"SANGS PF66","cert":"2025-1284-003","notes":"Early issue; solid mid-grade proof with good collector appeal.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_1_KrugerRand_1968_Back%20(3).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_1_KrugerRand_1968_Front%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0010","year":"1968","coin_type":"1oz Gold Proof","grading":"SANGS PF66","cert":"2025-1211-002","notes":"Early issue; consistent mid-grade example, not rare but desirable.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_94_KrugerRand_1968_Back%20(2).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_94_KrugerRand_1968_Front%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0011","year":"1968","coin_type":"1oz Gold Proof","grading":"SANGS AU58","cert":"2025-1284-004","notes":"Early issue; near-proof appearance","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_95_KrugerRand_1968_Back%20(2).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_95_KrugerRand_1968_Front%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0012","year":"1968","coin_type":"1oz Gold Proof","grading":"SGCE 89","cert":"13536","notes":"Early proof issue; moderate grade with solid collector appeal.","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0012%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0012%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0013","year":"1968","coin_type":"1oz Gold Proof","grading":"SGCE 98","cert":"48454","notes":"Early proof issue; high-grade example with added desirability.","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0013%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0013%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0014","year":"1969","coin_type":"1oz Gold Proof","grading":"SANGS PF68","cert":"2025-1212-003","notes":"Early issue; high-grade proof, strong eye appeal though not scarce.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_2_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_2_KrugerRand_1969_Front%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0015","year":"1969","coin_type":"1oz Gold Proof","grading":"SANGS PF68","cert":"2025-1212-002","notes":"Early issue; premium grade example with strong collector demand.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_3_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_3_KrugerRand_1969_Front%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0016","year":"1969","coin_type":"1oz Gold Proof","grading":"SANGS PF68","cert":"2025-1211-004","notes":"Early issue; attractive high-grade coin, readily collectible.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_61_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_61_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0017","year":"1969","coin_type":"1oz Gold Proof","grading":"SGCE 93","cert":"6252","notes":"Early proof issue; mid-to-high grade with good collector demand.","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0017%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0017%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0018","year":"1969","coin_type":"1oz Gold Proof","grading":"SGCE 95","cert":"45728","notes":"Early issue; equivalent high-grade proof, solid collector piece.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_96_KrugerRand_1969_Front%20(4).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_96_KrugerRand_1969_Back%20(4).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0019","year":"1970","coin_type":"1oz Gold Proof","grading":"SGCE 97","cert":"46126","notes":"Early 1970s proof; high-grade example with strong appeal.","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0019%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0019%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0020","year":"1983","coin_type":"1oz Gold Proof","grading":"SGCE 103","cert":"76379","notes":"Later proof issue; exceptional grade","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0020%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0020%20(.jpg?tr=n-sa-bullion-product","mintage":"19100","rarity":"Common","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0021","year":"1985","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Proof issue; standard mintage year offering both gold value and classic Krugerrand appeal.","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0021%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0021%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10224","rarity":"Low Mintage","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0023","year":"1982","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Pre-sanctions issue; first year of revised reverse design, solid type appeal.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0023%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0023%20(Back).jpg?tr=n-sa-bullion-product","mintage":"16960","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0024","year":"1978","coin_type":"1oz Gold Proof","grading":"SGCE 104","cert":"50875","notes":"Peak-era issue; exceptional grade with outstanding surface quality and strong collector appeal.","img_front":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0024%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0024%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0025","year":"1981","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Peak-era issue; first year of reverse mintmark, added variety interest.","img_front":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0025%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0025%20(Back).jpg?tr=n-sa-bullion-product","mintage":"12900","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0026","year":"1982","coin_type":"1oz Gold Proof","grading":"SGCE 103","cert":"54858","notes":"Pre-sanctions issue; exceptional grade on first year of revised reverse design.","img_front":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0026%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0026%20(Back).jpg?tr=n-sa-bullion-product","mintage":"16960","rarity":"Common","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0027","year":"1983","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Pre-sanctions issue; solid gold and numismatic value.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0027%20(Front).jpg?updatedAt=1778833997809&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0027%20(Back).jpg?updatedAt=1778833997818&tr=n-sa-bullion-product","mintage":"19100","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0028","year":"1984","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Last full pre-sanctions year; strong type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0028%20(Front).jpg?updatedAt=1778833997748&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0028%20(Back).jpg?updatedAt=1778833997772&tr=n-sa-bullion-product","mintage":"14000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0029","year":"1984","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Last full pre-sanctions year; strong type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0029%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0029%20(Back).jpg?tr=n-sa-bullion-product","mintage":"14000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0030","year":"1978","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Peak-era issue; solid type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0030%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0030%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0031","year":"1980","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Milestone year; first year of fractional Krugerrand range, good collector appeal.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0031%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0031%20(Back).jpg?tr=n-sa-bullion-product","mintage":"12000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0032","year":"1975","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Mid-70s issue; pre-peak era proof with solid type demand and full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0032%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0032%20(Back).jpg?tr=n-sa-bullion-product","mintage":"5600","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0033","year":"1973","coin_type":"1oz Gold Proof","grading":"SGCE 92","cert":"14603","notes":"Early issue; mid-grade certified example from the Krugerrand's formative years, good collector appeal.","img_front":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0033%20(Front).jpg?updatedAt=1777533776227&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0033%20(Back).jpg?updatedAt=1777533776821&tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0034","year":"1984","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Late pre-sanctions issue; solid gold and numismatic value with strong type demand.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0034%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0034%20(Front).jpg?tr=n-sa-bullion-product","mintage":"14000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0035","year":"1981","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Peak-era issue; first year of reverse mintmark, added variety interest.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0035%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0035%20(Back).jpg?tr=n-sa-bullion-product","mintage":"12900","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0036","year":"1984","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Last full pre-sanctions year; strong type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0036%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0036%20(Back).jpg?tr=n-sa-bullion-product","mintage":"14000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0037","year":"1978","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Peak-era issue; solid type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0037%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0037%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"N","status":"In Stock"},{"id":"Nate Reserved","year":"1992","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Peak-era issue; solid type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-Nate-Reserved%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0029%20(Back).jpg?tr=n-sa-bullion-product","mintage":"2067","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"MT Reserved","year":"2002","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"Mintmark","notes":"Basel World Money Fair Mintmark Proof","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-Thakier-Reserved%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-Thakier-Reserved%20(Back).jpg?tr=n-sa-bullion-product","mintage":"3531","rarity":"Rare","graded_flag":"N","status":"In Stock"}],
+  "half": [{"id":"PKR-1/2OZ-0001","year":"1982","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0001%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0001%20(Back).jpg?tr=n-sa-bullion-product","mintage":"13000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0002","year":"1982","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0002%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0002%20(Back).jpg?tr=n-sa-bullion-product","mintage":"13000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0003","year":"1981","coin_type":"1/2oz Gold Proof","grading":"SANGS PF104","cert":"H5036","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0003%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0003%20(Back).jpg?tr=n-sa-bullion-product","mintage":"9000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1/2OZ-0004","year":"1983","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0004%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0004%20(Back).jpg?tr=n-sa-bullion-product","mintage":"13600","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0005","year":"1984","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0005%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0005%20(Back).jpg?tr=n-sa-bullion-product","mintage":"9900","rarity":"Low Mintage","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0006","year":"1990","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0006%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0006%20(Back).jpg?tr=n-sa-bullion-product","mintage":"2850","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0007","year":"2015","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0007%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0007%20(Back).jpg?tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0008","year":"2015","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0008%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0008%20(Back).jpg?tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0009","year":"2015","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0009%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0009%20(Back).jpg?tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0010","year":"2015","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0010%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0010%20(Back).jpg?tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0011","year":"2015","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1.2OZ-0011%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0011%20(Front).jpg?tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0012","year":"2017 (50th Anniversary)","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0012%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0012%20(Back).jpg?tr=n-sa-bullion-product","mintage":"500","rarity":"Ultra Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0013","year":"2005","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0013%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0013%20(Back).jpg?updatedAt=1778833512201&tr=n-sa-bullion-product","mintage":"3092","rarity":"Rare","graded_flag":"N","status":"In Stock"}],
+  "quarter": [{"id":"PKR-1/4OZ-0001","year":"1982","coin_type":"1/4oz Gold Proof","grading":"SGCE -","cert":"Q4816","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0001%20(Front).jpg?updatedAt=1778832969097&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0001%20(Back).jpg?updatedAt=1778832968979&tr=n-sa-bullion-product","mintage":"11270","rarity":"Common","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1/4OZ-0002","year":"1984","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0002%20(Front).jpg?updatedAt=1778832969011&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0002%20(Back).jpg?updatedAt=1778832969033&tr=n-sa-bullion-product","mintage":"13020","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0003","year":"1984","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0003%20(Front).jpg?updatedAt=1778832968970&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0003%20(Back).jpg?updatedAt=1778832968958&tr=n-sa-bullion-product","mintage":"13020","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0004","year":"2004","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0004%20(Front).jpg?updatedAt=1778832968968&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0004%20(Back).jpg?updatedAt=1778832968960&tr=n-sa-bullion-product","mintage":"4570","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0005","year":"2009","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0005%20(Front).jpg?updatedAt=1778832968984&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0005%20(Back).jpg?updatedAt=1778832969031&tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0006","year":"2014","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0006%20(Front).jpg?updatedAt=1778832969019&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0006%20(Front).jpg?updatedAt=1778832969019&tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0007","year":"2005","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0007%20(Front).jpg?updatedAt=1778832969021&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0007%20(Back).jpg?updatedAt=1778832969032&tr=n-sa-bullion-product","mintage":"4115","rarity":"Rare","graded_flag":"N","status":"In Stock"}],
+  "tenth": [{"id":"PKR-1/10OZ-0001","year":"1982","coin_type":"1/10oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0001%20(Front).jpg?updatedAt=1778833002203&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0001%20(Back).jpg?updatedAt=1778833002196&tr=n-sa-bullion-product","mintage":"11270","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/10OZ-0002","year":"1982","coin_type":"1/10oz Gold Proof","grading":"SGCE -","cert":"T1552","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0002%20(Front).jpg?updatedAt=1778833002293&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0002%20(Back).jpg?updatedAt=1778833002163&tr=n-sa-bullion-product","mintage":"11270","rarity":"Common","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1/10OZ-0003","year":"1982","coin_type":"1/10oz Gold Proof","grading":"SGCE -","cert":"T4616","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0003%20(Front).jpg?updatedAt=1778833002311&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0003%20(Back).jpg?updatedAt=1778833002281&tr=n-sa-bullion-product","mintage":"11270","rarity":"Common","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1/10OZ-0004","year":"1987","coin_type":"1/10oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0004%20(Front).jpg?updatedAt=1778833002122&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0004%20(Back).jpg?tr=n-sa-bullion-product","mintage":"6065","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/10OZ-0005","year":"1992","coin_type":"1/10oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0005%20(Front).jpg?updatedAt=1778833002206&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0001%20(Back).jpg?updatedAt=1778833002196&tr=n-sa-bullion-product","mintage":"1789","rarity":"Ultra Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/10OZ-0006","year":"2000","coin_type":"1/10oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0006%20(Front).jpg?updatedAt=1778833002161&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0006%20(Back).jpg?updatedAt=1778833002193&tr=n-sa-bullion-product","mintage":"4603","rarity":"Rare","graded_flag":"N","status":"In Stock"}]
+};
 
 const RARITY_MAP = {
   'Ultra Rare': { cls: 'rarity-ultra', label: 'Ultra Rare' },
@@ -867,12 +2107,7 @@ function renderAll() {
   let totalGraded = 0;
   tabs.forEach(({ key, data }) => {
     const grid = document.getElementById('grid-' + key);
-    const sorted = [...data].sort((a, b) => {
-      const ya = parseInt(a.year) || 9999;
-      const yb = parseInt(b.year) || 9999;
-      return ya - yb;
-    });
-    grid.innerHTML = sorted.map(c => buildCard(c, key)).join('');
+    grid.innerHTML = data.map(c => buildCard(c, key)).join('');
     buildFilters(key, data);
     totalGraded += data.filter(c => c.graded_flag === 'Y').length;
   });
@@ -972,5 +2207,6 @@ document.addEventListener('keydown', e => {
 
 renderAll();
 </script>
-</body>
-</html>
+
+
+</body></html>
