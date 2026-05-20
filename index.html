@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SA Bullion — Proof Krugerrand Catalogue 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9932A;
+    --gold-light: #E8B84B;
+    --gold-pale: #F5E9C8;
+    --gold-dark: #8B6010;
+    --black: #0D0D0D;
+    --charcoal: #1A1A1A;
+    --dark: #242424;
+    --mid: #3A3A3A;
+    --muted: #888;
+    --light: #F2EDE4;
+    --white: #FDFAF5;
+    --border: rgba(201,147,42,0.2);
+    --border-strong: rgba(201,147,42,0.5);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--light);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    position: relative;
+    text-align: center;
+    padding: 80px 40px 60px;
+    border-bottom: 1px solid var(--border-strong);
+    background: linear-gradient(160deg, #1A1207 0%, #0D0D0D 50%, #0D0908 100%);
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 300px;
+    background: radial-gradient(ellipse, rgba(201,147,42,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--white);
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  header h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .header-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 36px;
+  }
+  .header-rule {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 36px;
+  }
+  .header-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--gold-light);
+    line-height: 1;
+    display: block;
+  }
+  .stat-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    display: block;
+    margin-top: 5px;
+  }
+
+  /* ─── NAVIGATION ─── */
+  .nav-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,13,13,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+  .nav-btn {
+    padding: 16px 28px;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.25s, border-bottom 0.25s;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    position: relative;
+  }
+  .nav-btn:hover { color: var(--gold-light); }
+  .nav-btn.active {
+    color: var(--gold-light);
+    border-bottom: 2px solid var(--gold);
+  }
+  .nav-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px; height: 18px;
+    background: var(--gold-dark);
+    color: var(--gold-pale);
+    border-radius: 50%;
+    font-size: 9px;
+    font-weight: 600;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* ─── MAIN ─── */
+  main { max-width: 1400px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* ─── SECTION HEADER ─── */
+  .section-header {
+    padding: 60px 0 40px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .section-title-group {}
+  .section-eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+  }
+  .section-count {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ─── FILTER BAR ─── */
+  .filter-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+  .filter-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-right: 8px;
+  }
+  .filter-btn {
+    padding: 6px 16px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .filter-btn:hover { border-color: var(--gold); color: var(--gold-light); }
+  .filter-btn.active {
+    background: var(--gold-dark);
+    border-color: var(--gold);
+    color: var(--gold-pale);
+  }
+
+  /* ─── GRID ─── */
+  .coin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2px;
+  }
+
+  /* ─── COIN CARD ─── */
+  .coin-card {
+    background: var(--charcoal);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  .coin-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,147,42,0.15);
+    z-index: 2;
+  }
+  .coin-card.hidden { display: none; }
+
+  /* Image area */
+  .coin-images {
+    position: relative;
+    background: #0e0e0e;
+    display: flex;
+    align-items: stretch;
+    height: 240px;
+  }
+  .coin-img-wrap {
+    width: 100%;
+    height: 240px;
+    flex-shrink: 0;
+    background: #0e0e0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 16px;
+    position: relative;
+  }
+  .coin-img-wrap::after {
+    content: 'Click to view both sides';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 28px 10px 8px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: rgba(201,147,42,0.7);
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .coin-card:hover .coin-img-wrap::after { opacity: 1; }
+  .coin-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+  }
+  .coin-img-divider { display: none; }
+  .coin-img-placeholder {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.15;
+  }
+  .coin-img-placeholder svg { width: 48px; height: 48px; }
+
+  .img-label { display: none; }
+
+  /* Rarity ribbon */
+  .rarity-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 3px 10px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+  .rarity-common { background: rgba(100,100,100,0.7); color: #aaa; }
+  .rarity-low { background: rgba(60,80,120,0.8); color: #9bb3e8; }
+  .rarity-rare { background: rgba(120,60,40,0.85); color: #f0a080; }
+  .rarity-ultra { background: linear-gradient(135deg, rgba(201,147,42,0.9), rgba(139,96,16,0.9)); color: #fff; }
+  .graded-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 3px 8px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: rgba(30,80,50,0.85);
+    color: #7dcfa0;
+    border-radius: 2px;
+  }
+
+  /* Card body */
+  .coin-body {
+    padding: 20px 20px 16px;
+  }
+  .coin-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 8px;
+  }
+  .coin-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+  }
+  .coin-type {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--gold-light);
+    text-align: right;
+    line-height: 1.3;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .coin-id {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .coin-grading {
+    font-size: 12px;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+  .coin-notes {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    font-style: italic;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .coin-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .coin-mintage { font-size: 11px; color: var(--muted); }
+  .coin-mintage span { color: var(--light); font-weight: 400; }
+  .coin-cert { font-size: 10px; color: var(--muted); text-align: right; }
+  .coin-cert span { color: var(--gold); }
+  .status-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #4caf82;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  /* ─── TAB PANELS ─── */
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* ─── ZOOM OVERLAY ─── */
+  .zoom-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0,0,0,0.96);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  .zoom-overlay.open { display: flex; }
+  .zoom-overlay img {
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+    cursor: zoom-out;
+    user-select: none;
+  }
+  .zoom-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(201,147,42,0.15);
+    border: 1px solid rgba(201,147,42,0.3);
+    color: var(--gold-light);
+    font-size: 28px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s;
+    user-select: none;
+  }
+  .zoom-nav:hover { background: rgba(201,147,42,0.3); }
+  .zoom-prev { left: 16px; }
+  .zoom-next { right: 16px; }
+  .zoom-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: none; border: none;
+    color: var(--muted);
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+  .zoom-close:hover { color: var(--gold-light); }
+  .zoom-label {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .modal-img-wrap {
+    cursor: zoom-in;
+  }
+  .modal-img-wrap:hover::after {
+    content: '🔍 Click to zoom';
+    position: absolute;
+    bottom: 8px; right: 8px;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: rgba(201,147,42,0.8);
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.6);
+    padding: 4px 8px;
+    border-radius: 2px;
+  }
+
+  /* ─── MODAL ─── */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--charcoal);
+    border: 1px solid var(--border-strong);
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: none; border: none;
+    color: var(--muted);
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10;
+    transition: color 0.2s;
+  }
+  .modal-close:hover { color: var(--gold-light); }
+  .modal-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    max-height: 380px;
+    overflow: hidden;
+  }
+  .modal-img-wrap {
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 380px;
+    position: relative;
+  }
+  .modal-img-wrap img {
+    max-width: 100%; max-height: 100%;
+    object-fit: contain;
+  }
+  .modal-img-label {
+    position: absolute;
+    bottom: 8px; left: 12px;
+    font-size: 9px; letter-spacing: 0.2em;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .modal-body { padding: 32px; }
+  .modal-header { margin-bottom: 24px; }
+  .modal-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+    display: block;
+  }
+  .modal-type {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 32px;
+    margin-top: 24px;
+  }
+  .modal-field label {
+    display: block;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .modal-field .val {
+    font-size: 14px;
+    color: var(--light);
+    font-weight: 400;
+  }
+  .modal-notes {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: #aaa;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  /* ─── EMPTY STATE ─── */
+  .empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--muted);
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    display: none;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(0deg, #080808 0%, transparent 100%);
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .footer-sub {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 50px 20px 40px; }
+    .header-stats { gap: 30px; }
+    .section-header { padding: 40px 0 24px; }
+    .nav-btn { padding: 14px 16px; font-size: 10px; }
+    .coin-grid { grid-template-columns: 1fr; }
+    .modal-images { grid-template-columns: 1fr; }
+    .modal-img-wrap { height: 260px; }
+    .modal-grid { grid-template-columns: 1fr; }
+    main { padding: 0 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <p class="header-eyebrow">SA Bullion &nbsp;·&nbsp; Est. Collection</p>
+  <h1>Proof <em>Krugerrand</em><br>Catalogue</h1>
+  <p class="header-subtitle">2026 Edition — Complete Holdings</p>
+  <div class="header-rule"></div>
+  <div class="header-stats">
+    <div class="stat"><span class="stat-num" id="total-count">64</span><span class="stat-label">Total Coins</span></div>
+    <div class="stat"><span class="stat-num">4</span><span class="stat-label">Denominations</span></div>
+    <div class="stat"><span class="stat-num">1967–2017</span><span class="stat-label">Year Span</span></div>
+    <div class="stat"><span class="stat-num" id="graded-count">—</span><span class="stat-label">Graded Coins</span></div>
+  </div>
+</header>
+
+<!-- NAVIGATION -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <button class="nav-btn active" onclick="showTab('1oz')" id="tab-btn-1oz">
+      1 oz <span class="nav-count" id="count-1oz">33</span>
+    </button>
+    <button class="nav-btn" onclick="showTab('half')" id="tab-btn-half">
+      ½ oz <span class="nav-count" id="count-half">13</span>
+    </button>
+    <button class="nav-btn" onclick="showTab('quarter')" id="tab-btn-quarter">
+      ¼ oz <span class="nav-count" id="count-quarter">12</span>
+    </button>
+    <button class="nav-btn" onclick="showTab('tenth')" id="tab-btn-tenth">
+      1/10 oz <span class="nav-count" id="count-tenth">6</span>
+    </button>
+  </nav>
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- 1oz TAB -->
+  <div class="tab-panel active" id="panel-1oz">
+    <div class="section-header">
+      <div class="section-title-group">
+        <p class="section-eyebrow">First Strike · Full Weight</p>
+        <h2 class="section-title">1 oz Proof Krugerrand</h2>
+      </div>
+      <span class="section-count" id="visible-1oz">Showing all 33 coins</span>
+    </div>
+    <div class="filter-bar" id="filters-1oz"></div>
+    <div class="coin-grid" id="grid-1oz"></div>
+    <p class="empty-state" id="empty-1oz">No coins match the selected filter.</p>
+  </div>
+
+  <!-- ½oz TAB -->
+  <div class="tab-panel" id="panel-half">
+    <div class="section-header">
+      <div class="section-title-group">
+        <p class="section-eyebrow">Fractional Series</p>
+        <h2 class="section-title">½ oz Proof Krugerrand</h2>
+      </div>
+      <span class="section-count" id="visible-half">Showing all 13 coins</span>
+    </div>
+    <div class="filter-bar" id="filters-half"></div>
+    <div class="coin-grid" id="grid-half"></div>
+    <p class="empty-state" id="empty-half">No coins match the selected filter.</p>
+  </div>
+
+  <!-- ¼oz TAB -->
+  <div class="tab-panel" id="panel-quarter">
+    <div class="section-header">
+      <div class="section-title-group">
+        <p class="section-eyebrow">Fractional Series</p>
+        <h2 class="section-title">¼ oz Proof Krugerrand</h2>
+      </div>
+      <span class="section-count" id="visible-quarter">Showing all 12 coins</span>
+    </div>
+    <div class="filter-bar" id="filters-quarter"></div>
+    <div class="coin-grid" id="grid-quarter"></div>
+    <p class="empty-state" id="empty-quarter">No coins match the selected filter.</p>
+  </div>
+
+  <!-- 1/10oz TAB -->
+  <div class="tab-panel" id="panel-tenth">
+    <div class="section-header">
+      <div class="section-title-group">
+        <p class="section-eyebrow">Fractional Series</p>
+        <h2 class="section-title">1/10 oz Proof Krugerrand</h2>
+      </div>
+      <span class="section-count" id="visible-tenth">Showing all 6 coins</span>
+    </div>
+    <div class="filter-bar" id="filters-tenth"></div>
+    <div class="coin-grid" id="grid-tenth"></div>
+    <p class="empty-state" id="empty-tenth">No coins match the selected filter.</p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo">SA Bullion</p>
+  <p class="footer-sub">Proof Krugerrand Catalogue · 2026 Edition · All Rights Reserved</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal-content">
+    <button class="modal-close" onclick="closeModalDirect()">×</button>
+    <div class="modal-images" id="modal-images"></div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ZOOM OVERLAY -->
+<div class="zoom-overlay" id="zoom-overlay" onclick="closeZoom(event)">
+  <button class="zoom-close" onclick="closeZoomDirect()">×</button>
+  <button class="zoom-nav zoom-prev" onclick="zoomNav(-1, event)">&#8249;</button>
+  <img id="zoom-img" src="" alt="">
+  <button class="zoom-nav zoom-next" onclick="zoomNav(1, event)">&#8250;</button>
+  <span class="zoom-label" id="zoom-label"></span>
+</div>
+
+<script>
+const DATA = {
+  "1oz": [{"id":"PKR-1OZ-0009","year":"1968","coin_type":"1oz Gold Proof","grading":"SANGS PF66","cert":"2025-1284-003","notes":"Early issue; solid mid-grade proof with good collector appeal.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_1_KrugerRand_1968_Back%20(3).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_1_KrugerRand_1968_Front%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0010","year":"1968","coin_type":"1oz Gold Proof","grading":"SANGS PF66","cert":"2025-1211-002","notes":"Early issue; consistent mid-grade example, not rare but desirable.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_94_KrugerRand_1968_Back%20(2).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_94_KrugerRand_1968_Front%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0011","year":"1968","coin_type":"1oz Gold Proof","grading":"SANGS AU58","cert":"2025-1284-004","notes":"Early issue; near-proof appearance","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_95_KrugerRand_1968_Back%20(2).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_95_KrugerRand_1968_Front%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0012","year":"1968","coin_type":"1oz Gold Proof","grading":"SGCE 89","cert":"13536","notes":"Early proof issue; moderate grade with solid collector appeal.","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0012%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0012%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0013","year":"1968","coin_type":"1oz Gold Proof","grading":"SGCE 98","cert":"48454","notes":"Early proof issue; high-grade example with added desirability.","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0013%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0013%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0014","year":"1969","coin_type":"1oz Gold Proof","grading":"SANGS PF68","cert":"2025-1212-003","notes":"Early issue; high-grade proof, strong eye appeal though not scarce.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_2_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_2_KrugerRand_1969_Front%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0015","year":"1969","coin_type":"1oz Gold Proof","grading":"SANGS PF68","cert":"2025-1212-002","notes":"Early issue; premium grade example with strong collector demand.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_3_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_3_KrugerRand_1969_Front%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0016","year":"1969","coin_type":"1oz Gold Proof","grading":"SANGS PF68","cert":"2025-1211-004","notes":"Early issue; attractive high-grade coin, readily collectible.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_61_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_61_KrugerRand_1969_Back%20(2).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0017","year":"1969","coin_type":"1oz Gold Proof","grading":"SGCE 93","cert":"6252","notes":"Early proof issue; mid-to-high grade with good collector demand.","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0017%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0017%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0018","year":"1969","coin_type":"1oz Gold Proof","grading":"SGCE 95","cert":"45728","notes":"Early issue; equivalent high-grade proof, solid collector piece.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_96_KrugerRand_1969_Front%20(4).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Photos%2009.04/SAB_96_KrugerRand_1969_Back%20(4).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0019","year":"1970","coin_type":"1oz Gold Proof","grading":"SGCE 97","cert":"46126","notes":"Early 1970s proof; high-grade example with strong appeal.","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0019%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0019%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0020","year":"1983","coin_type":"1oz Gold Proof","grading":"SGCE 103","cert":"76379","notes":"Later proof issue; exceptional grade","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0020%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0020%20(.jpg?tr=n-sa-bullion-product","mintage":"19100","rarity":"Common","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0021","year":"1985","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Proof issue; standard mintage year offering both gold value and classic Krugerrand appeal.","img_front":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0021%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/New%20Folder/PKR-1OZ-0021%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10224","rarity":"Low Mintage","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0023","year":"1982","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Pre-sanctions issue; first year of revised reverse design, solid type appeal.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0023%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0023%20(Back).jpg?tr=n-sa-bullion-product","mintage":"16960","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0024","year":"1978","coin_type":"1oz Gold Proof","grading":"SGCE 104","cert":"50875","notes":"Peak-era issue; exceptional grade with outstanding surface quality and strong collector appeal.","img_front":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0024%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0024%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0025","year":"1981","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Peak-era issue; first year of reverse mintmark, added variety interest.","img_front":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0025%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0025%20(Back).jpg?tr=n-sa-bullion-product","mintage":"12900","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0026","year":"1982","coin_type":"1oz Gold Proof","grading":"SGCE 103","cert":"54858","notes":"Pre-sanctions issue; exceptional grade on first year of revised reverse design.","img_front":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0026%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0026%20(Back).jpg?tr=n-sa-bullion-product","mintage":"16960","rarity":"Common","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0027","year":"1983","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Pre-sanctions issue; solid gold and numismatic value.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0027%20(Front).jpg?updatedAt=1778833997809&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0027%20(Back).jpg?updatedAt=1778833997818&tr=n-sa-bullion-product","mintage":"19100","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0028","year":"1984","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Last full pre-sanctions year; strong type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0028%20(Front).jpg?updatedAt=1778833997748&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0028%20(Back).jpg?updatedAt=1778833997772&tr=n-sa-bullion-product","mintage":"14000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0029","year":"1984","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Last full pre-sanctions year; strong type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0029%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0029%20(Back).jpg?tr=n-sa-bullion-product","mintage":"14000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0030","year":"1978","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Peak-era issue; solid type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0030%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0030%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0031","year":"1980","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Milestone year; first year of fractional Krugerrand range, good collector appeal.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0031%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0031%20(Back).jpg?tr=n-sa-bullion-product","mintage":"12000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0032","year":"1975","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Mid-70s issue; pre-peak era proof with solid type demand and full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0032%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0032%20(Back).jpg?tr=n-sa-bullion-product","mintage":"5600","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0033","year":"1973","coin_type":"1oz Gold Proof","grading":"SGCE 92","cert":"14603","notes":"Early issue; mid-grade certified example from the Krugerrand's formative years, good collector appeal.","img_front":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0033%20(Front).jpg?updatedAt=1777533776227&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Upload%202%2030.04.2026/PKR-1OZ-0033%20(Back).jpg?updatedAt=1777533776821&tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1OZ-0034","year":"1984","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Late pre-sanctions issue; solid gold and numismatic value with strong type demand.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0034%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0034%20(Front).jpg?tr=n-sa-bullion-product","mintage":"14000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0035","year":"1981","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Peak-era issue; first year of reverse mintmark, added variety interest.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0035%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0035%20(Back).jpg?tr=n-sa-bullion-product","mintage":"12900","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0036","year":"1984","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Last full pre-sanctions year; strong type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0036%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0036%20(Back).jpg?tr=n-sa-bullion-product","mintage":"14000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0037","year":"1978","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Peak-era issue; solid type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0037%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0037%20(Back).jpg?tr=n-sa-bullion-product","mintage":"10000","rarity":"Low Mintage","graded_flag":"N","status":"In Stock"},{"id":"Nate Reserved","year":"1992","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Peak-era issue; solid type demand with full gold content.","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-Nate-Reserved%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-0029%20(Back).jpg?tr=n-sa-bullion-product","mintage":"2067","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"MT Reserved","year":"2002","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"Mintmark","notes":"Basel World Money Fair Mintmark Proof","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-Thakier-Reserved%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR1/PKR-1OZ-Thakier-Reserved%20(Back).jpg?tr=n-sa-bullion-product","mintage":"300","rarity":"Ultra Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0038","year":"1979","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Peak-era issue; solid type and gold value.","img_front":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR-1OZ-0038%20(Front).jpg?updatedAt=1779280015443&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR-1OZ-0038%20(Back).jpg?updatedAt=1779280015604&tr=n-sa-bullion-product","mintage":"11800","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0039","year":"1983","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Pre-sanctions issue; solid gold and numismatic value.","img_front":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR-1OZ-0039%20(Front).jpg?updatedAt=1779280015476&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR-1OZ-0039%20(Back).jpg?updatedAt=1779280015699&tr=n-sa-bullion-product","mintage":"19100","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1OZ-0040","year":"1967 (50th Anniversary)","coin_type":"1oz Gold Proof","grading":"Ungraded","cert":"—","notes":"Special anniversary issue; first-year proof with strong collector demand.","img_front":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR-1OZ-0040%20(Front).jpg?updatedAt=1779280015755&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR-1OZ-0040%20(Back).jpg?updatedAt=1779280015194&tr=n-sa-bullion-product","mintage":"100000","rarity":"Common","graded_flag":"N","status":"In Stock"}],
+  "half": [{"id":"PKR-1/2OZ-0001","year":"1982","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0001%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0001%20(Back).jpg?tr=n-sa-bullion-product","mintage":"13000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0002","year":"1982","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0002%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0002%20(Back).jpg?tr=n-sa-bullion-product","mintage":"13000","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0003","year":"1981","coin_type":"1/2oz Gold Proof","grading":"SANGS PF104","cert":"H5036","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0003%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0003%20(Back).jpg?tr=n-sa-bullion-product","mintage":"9000","rarity":"Low Mintage","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1/2OZ-0004","year":"1983","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0004%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0004%20(Back).jpg?tr=n-sa-bullion-product","mintage":"13600","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0005","year":"1984","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0005%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0005%20(Back).jpg?tr=n-sa-bullion-product","mintage":"9900","rarity":"Low Mintage","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0006","year":"1990","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0006%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0006%20(Back).jpg?tr=n-sa-bullion-product","mintage":"2850","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0007","year":"2015","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0007%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0007%20(Back).jpg?tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0008","year":"2015","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0008%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0008%20(Back).jpg?tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0009","year":"2015","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0009%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0009%20(Back).jpg?tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0010","year":"2015","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0010%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0010%20(Back).jpg?tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0011","year":"2015","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1.2OZ-0011%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0011%20(Front).jpg?tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0012","year":"2017 (50th Anniversary)","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0012%20(Front).jpg?tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR2/PKR-1-2OZ-0012%20(Back).jpg?tr=n-sa-bullion-product","mintage":"500","rarity":"Ultra Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/2OZ-0013","year":"2005","coin_type":"1/2oz Gold Proof","grading":"Ungraded","cert":"Ungraded","notes":"—","img_front":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR2/PKR-1-2OZ-0013%20(Back).jpg?updatedAt=1779280445222&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR2/PKR-1-2OZ-0013%20(Back).jpg?updatedAt=1779280445222&tr=n-sa-bullion-product","mintage":"3092","rarity":"Rare","graded_flag":"N","status":"In Stock"}],
+  "quarter": [{"id":"PKR-1/4OZ-0001","year":"1982","coin_type":"1/4oz Gold Proof","grading":"SGCE -","cert":"Q4816","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0001%20(Front).jpg?updatedAt=1778832969097&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0001%20(Back).jpg?updatedAt=1778832968979&tr=n-sa-bullion-product","mintage":"11270","rarity":"Common","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1/4OZ-0002","year":"1984","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0002%20(Front).jpg?updatedAt=1778832969011&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0002%20(Back).jpg?updatedAt=1778832969033&tr=n-sa-bullion-product","mintage":"13020","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0003","year":"1984","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0003%20(Front).jpg?updatedAt=1778832968970&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0003%20(Back).jpg?updatedAt=1778832968958&tr=n-sa-bullion-product","mintage":"13020","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0004","year":"2004","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0004%20(Front).jpg?updatedAt=1778832968968&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0004%20(Back).jpg?updatedAt=1778832968960&tr=n-sa-bullion-product","mintage":"4570","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0005","year":"2009","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0005%20(Front).jpg?updatedAt=1778832968984&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0005%20(Back).jpg?updatedAt=1778832969031&tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0006","year":"2014","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0006%20(Front).jpg?updatedAt=1778832969019&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0006%20(Front).jpg?updatedAt=1778832969019&tr=n-sa-bullion-product","mintage":"N/A","rarity":"","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0007","year":"2005","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0007%20(Front).jpg?updatedAt=1778832969021&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR4/PKR-1-4OZ-0007%20(Back).jpg?updatedAt=1778832969032&tr=n-sa-bullion-product","mintage":"4115","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0008","year":"1984","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR4/PKR-1-4OZ-0008%20(Front).jpg?updatedAt=1779281476714&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR4/PKR-1-4OZ-0008(Back).jpg?updatedAt=1779281477146&tr=n-sa-bullion-product","mintage":"13020","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0009","year":"1984","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR4/PKR-1-4OZ-0009%20(Front).jpg?updatedAt=1779281477053&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR4/PKR-1-4OZ-0009%20(Back).jpg?updatedAt=1779281476698&tr=n-sa-bullion-product","mintage":"13020","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0010","year":"1985","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR4/PKR-1-4OZ-0010%20(Front).jpg?updatedAt=1779281477131&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR4/PKR-1-4OZ-0010%20(Back).jpg?updatedAt=1779281476783&tr=n-sa-bullion-product","mintage":"6700","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0011","year":"1994","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR4/PKR-1-4OZ-0011%20(Front).jpg?updatedAt=1779281477189&tr=n-sa-bullion-product","img_back":"","mintage":"1874","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/4OZ-0012","year":"1995","coin_type":"1/4oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR4/PKR-1-4OZ-0012%20(Front).jpg?updatedAt=1779281476947&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/20%20May%202026/PKR4/PKR-1-4OZ-0012%20(Back).jpg?updatedAt=1779281476755&tr=n-sa-bullion-product","mintage":"1095","rarity":"Rare","graded_flag":"N","status":"In Stock"}],
+  "tenth": [{"id":"PKR-1/10OZ-0001","year":"1982","coin_type":"1/10oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0001%20(Front).jpg?updatedAt=1778833002203&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0001%20(Back).jpg?updatedAt=1778833002196&tr=n-sa-bullion-product","mintage":"11270","rarity":"Common","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/10OZ-0002","year":"1982","coin_type":"1/10oz Gold Proof","grading":"SGCE -","cert":"T1552","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0002%20(Front).jpg?updatedAt=1778833002293&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0002%20(Back).jpg?updatedAt=1778833002163&tr=n-sa-bullion-product","mintage":"11270","rarity":"Common","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1/10OZ-0003","year":"1982","coin_type":"1/10oz Gold Proof","grading":"SGCE -","cert":"T4616","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0003%20(Front).jpg?updatedAt=1778833002311&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0003%20(Back).jpg?updatedAt=1778833002281&tr=n-sa-bullion-product","mintage":"11270","rarity":"Common","graded_flag":"Y","status":"In Stock"},{"id":"PKR-1/10OZ-0004","year":"1987","coin_type":"1/10oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0004%20(Front).jpg?updatedAt=1778833002122&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0004%20(Back).jpg?tr=n-sa-bullion-product","mintage":"6065","rarity":"Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/10OZ-0005","year":"1992","coin_type":"1/10oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0005%20(Front).jpg?updatedAt=1778833002206&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0001%20(Back).jpg?updatedAt=1778833002196&tr=n-sa-bullion-product","mintage":"1789","rarity":"Ultra Rare","graded_flag":"N","status":"In Stock"},{"id":"PKR-1/10OZ-0006","year":"2000","coin_type":"1/10oz Gold Proof","grading":"Ungraded","cert":"—","notes":"—","img_front":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0006%20(Front).jpg?updatedAt=1778833002161&tr=n-sa-bullion-product","img_back":"https://ik.imagekit.io/sabullion/Proof%20Shoot%20-%2015.05.2026/PKR10/PKR-1-10OZ-0006%20(Back).jpg?updatedAt=1778833002193&tr=n-sa-bullion-product","mintage":"4603","rarity":"Rare","graded_flag":"N","status":"In Stock"}]
+};
+
+const RARITY_MAP = {
+  'Ultra Rare': { cls: 'rarity-ultra', label: 'Ultra Rare' },
+  'Rare':       { cls: 'rarity-rare',  label: 'Rare' },
+  'Low Mintage':{ cls: 'rarity-low',   label: 'Low Mintage' },
+  'Common':     { cls: 'rarity-common', label: 'Common' },
+};
+
+function rarityBadge(r) {
+  const m = RARITY_MAP[r];
+  if (!m) return '';
+  return `<span class="rarity-badge ${m.cls}">${m.label}</span>`;
+}
+
+function buildCard(coin, tabKey) {
+  const graded = coin.graded_flag === 'Y';
+  const notes = (coin.notes && coin.notes !== '—') ? coin.notes : '';
+  return `
+    <div class="coin-card" data-rarity="${coin.rarity}" onclick="openModal('${coin.id.replace(/'/g,"\\'")}', '${tabKey}')">
+      <div class="coin-images">
+        <div class="coin-img-wrap">${coin.img_front ? `<img class="coin-img" src="${coin.img_front}" alt="Obverse" onerror="this.style.display='none'">` : `<svg viewBox="0 0 48 48" fill="none" style="width:48px;height:48px;opacity:.15"><circle cx="24" cy="24" r="20" stroke="#888" stroke-width="1.5"/></svg>`}</div>
+        <span class="img-label img-label-obv">Obverse</span>
+        <span class="img-label img-label-rev" style="right:0;left:auto">Reverse</span>
+        ${rarityBadge(coin.rarity)}
+        ${graded ? `<span class="graded-badge">Graded</span>` : ''}
+      </div>
+      <div class="coin-body">
+        <div class="coin-top">
+          <span class="coin-year">${coin.year}</span>
+          <span class="coin-type">${coin.coin_type}</span>
+        </div>
+        <p class="coin-id">${coin.id}</p>
+        ${coin.grading !== 'Ungraded' && coin.grading !== '—' ? `<p class="coin-grading">${coin.grading}</p>` : ''}
+        ${notes ? `<p class="coin-notes">${notes}</p>` : ''}
+        <div class="coin-footer">
+          <span class="coin-mintage">Mintage: <span>${coin.mintage !== 'N/A' ? Number(coin.mintage).toLocaleString() : 'N/A'}</span></span>
+          <span class="coin-cert">${coin.cert && coin.cert !== '—' && coin.cert !== 'Ungraded' ? `<span>Cert #</span> ${coin.cert}` : `<span class="status-dot"></span>In Stock`}</span>
+        </div>
+      </div>
+    </div>`;
+}
+
+let activeFilters = { '1oz': 'All', half: 'All', quarter: 'All', tenth: 'All' };
+let currentTab = '1oz';
+
+function getCurrentTab() { return currentTab; }
+
+function buildFilters(tabKey, data) {
+  const rarities = [...new Set(data.map(c => c.rarity).filter(Boolean))];
+  const container = document.getElementById('filters-' + tabKey);
+  let html = `<span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="applyFilter('${tabKey}','All',this)">All</button>`;
+  const order = ['Ultra Rare','Rare','Low Mintage','Common'];
+  order.filter(r => rarities.includes(r)).forEach(r => {
+    html += `<button class="filter-btn" onclick="applyFilter('${tabKey}','${r}',this)">${r}</button>`;
+  });
+  if (data.some(c => c.graded_flag === 'Y')) {
+    html += `<button class="filter-btn" onclick="applyFilter('${tabKey}','Graded',this)">Graded</button>`;
+  }
+  container.innerHTML = html;
+}
+
+function applyFilter(tabKey, value, btn) {
+  activeFilters[tabKey] = value;
+  document.querySelectorAll(`#filters-${tabKey} .filter-btn`).forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cards = document.querySelectorAll(`#grid-${tabKey} .coin-card`);
+  let visible = 0;
+  cards.forEach(card => {
+    const rarity = card.dataset.rarity;
+    const isGraded = card.querySelector('.graded-badge') !== null;
+    let show = value === 'All' || rarity === value || (value === 'Graded' && isGraded);
+    card.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+  const total = cards.length;
+  const label = visible === total ? `Showing all ${total} coins` : `Showing ${visible} of ${total} coins`;
+  document.getElementById('visible-' + tabKey).textContent = label;
+  document.getElementById('empty-' + tabKey).style.display = visible === 0 ? 'block' : 'none';
+}
+
+function renderAll() {
+  const tabs = [
+    { key: '1oz', data: DATA['1oz'] },
+    { key: 'half', data: DATA['half'] },
+    { key: 'quarter', data: DATA['quarter'] },
+    { key: 'tenth', data: DATA['tenth'] },
+  ];
+  let totalGraded = 0;
+  tabs.forEach(({ key, data }) => {
+    const grid = document.getElementById('grid-' + key);
+    grid.innerHTML = data.map(c => buildCard(c, key)).join('');
+    buildFilters(key, data);
+    totalGraded += data.filter(c => c.graded_flag === 'Y').length;
+  });
+  document.getElementById('graded-count').textContent = totalGraded;
+}
+
+function showTab(key) {
+  currentTab = key;
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + key).classList.add('active');
+  document.getElementById('tab-btn-' + key).classList.add('active');
+}
+
+// MODAL
+function openModal(id, tabKey) {
+  const allData = { ...DATA };
+  const tabData = allData[tabKey] || [];
+  const coin = tabData.find(c => c.id === id);
+  if (!coin) return;
+
+  const zoomImgs = [coin.img_front, coin.img_back].filter(Boolean);
+  window._zoomImgs = zoomImgs;
+  window._zoomLabels = ['Obverse', 'Reverse'];
+  document.getElementById('modal-images').innerHTML = `
+    <div class="modal-img-wrap" style="position:relative" onclick="openZoom(0)">
+      ${coin.img_front ? `<img src="${coin.img_front}" alt="Obverse">` : ''}
+      <span class="modal-img-label">Obverse</span>
+    </div>
+    <div class="modal-img-wrap" style="position:relative" onclick="openZoom(1)">
+      ${coin.img_back ? `<img src="${coin.img_back}" alt="Reverse">` : ''}
+      <span class="modal-img-label">Reverse</span>
+    </div>`;
+
+  document.getElementById('modal-body').innerHTML = `
+    <div class="modal-header">
+      <span class="modal-year">${coin.year}</span>
+      <span class="modal-type">${coin.coin_type}</span>
+    </div>
+    <div class="modal-grid">
+      <div class="modal-field"><label>Unique ID</label><div class="val">${coin.id}</div></div>
+      <div class="modal-field"><label>Grading</label><div class="val">${coin.grading}</div></div>
+      <div class="modal-field"><label>Certificate / Slab</label><div class="val">${coin.cert || '—'}</div></div>
+      <div class="modal-field"><label>Mintage</label><div class="val">${coin.mintage !== 'N/A' ? Number(coin.mintage).toLocaleString() : 'Not Available'}</div></div>
+      <div class="modal-field"><label>Rarity Tier</label><div class="val">${coin.rarity || '—'}</div></div>
+      <div class="modal-field"><label>Status</label><div class="val"><span class="status-dot"></span>${coin.status}</div></div>
+    </div>
+    ${(coin.notes && coin.notes !== '—') ? `<p class="modal-notes">${coin.notes}</p>` : ''}`;
+
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModalDirect();
+}
+function closeModalDirect() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+// ZOOM functions
+let _zoomIndex = 0;
+function openZoom(idx) {
+  event.stopPropagation();
+  const imgs = window._zoomImgs || [];
+  const labels = window._zoomLabels || [];
+  if (!imgs[idx]) return;
+  _zoomIndex = idx;
+  document.getElementById('zoom-img').src = imgs[idx];
+  document.getElementById('zoom-label').textContent = labels[idx] || '';
+  document.getElementById('zoom-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function zoomNav(dir, e) {
+  e.stopPropagation();
+  const imgs = window._zoomImgs || [];
+  _zoomIndex = (_zoomIndex + dir + imgs.length) % imgs.length;
+  document.getElementById('zoom-img').src = imgs[_zoomIndex];
+  document.getElementById('zoom-label').textContent = (window._zoomLabels || [])[_zoomIndex] || '';
+}
+function closeZoom(e) {
+  if (e.target === document.getElementById('zoom-overlay') || e.target === document.getElementById('zoom-img')) closeZoomDirect();
+}
+function closeZoomDirect() {
+  document.getElementById('zoom-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (document.getElementById('zoom-overlay').classList.contains('open')) {
+    if (e.key === 'Escape') closeZoomDirect();
+    if (e.key === 'ArrowLeft') zoomNav(-1, e);
+    if (e.key === 'ArrowRight') zoomNav(1, e);
+  }
+});
+
+renderAll();
+</script>
+</body>
+</html>
