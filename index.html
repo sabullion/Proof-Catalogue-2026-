@@ -2475,14 +2475,19 @@ function renderAll() {
     { key: 'quarter', data: DATA['quarter'] },
     { key: 'tenth', data: DATA['tenth'] },
   ];
-  let totalGraded = 0;
+  let totalGraded = 0, totalAll = 0;
   tabs.forEach(({ key, data }) => {
     const grid = document.getElementById('grid-' + key);
     grid.innerHTML = data.map(c => buildCard(c, key)).join('');
     buildFilters(key, data);
     totalGraded += data.filter(c => c.graded_flag === 'Y').length;
+    totalAll += data.length;
+    const vis = document.getElementById('visible-' + key);
+    if (vis) vis.textContent = 'Showing all ' + data.length + ' coins';
   });
   document.getElementById('graded-count').textContent = totalGraded;
+  const tc = document.getElementById('total-count');
+  if (tc) tc.textContent = totalAll;
 }
 
 function showTab(key) {
